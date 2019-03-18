@@ -38,25 +38,25 @@
   this.personalInfo = [
     {
       name: "Yuntong Man",
-      img: "../img/yuntong.png",
+      img: "/img/yuntong.png",
       role: "Instructional Designer",
       email: "Email: ymm2110@tc.columbia.edu",
     },
     {
       name: "Shuai Yuan",
-      img: "../img/shuai.jpeg",
+      img: "/img/shuai.jpeg",
       role: "Web Developer",
       email: "Email: sy2729@tc.columbia.edu",
     },
     {
       name: "Yigu Liang",
-      img: "../img/yigu.png",
+      img: "/img/yigu.png",
       role: "Subject Matter Expert",
       email: "Email: yl3605@tc.columbia.edu",
     },
     {
       name: "Zhiping Zhang",
-      img: "../img/zhiping.png",
+      img: "/img/zhiping.png",
       role: "UX Designer",
       email: "Email: zz2499@tc.columbia.edu",
     }

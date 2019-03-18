@@ -2,7 +2,7 @@
 <survey>
 
   <ul class="progress">
-    <li each={ i, index in surveyData} data-num = {index}>{index + 1}</li>
+    <li class="t-center" each={ i, index in surveyData} data-num = {index}>{index + 1}</li>
   </ul>
   <p class = "tipText">Press "Enter" key to record your answers</p>
 
@@ -92,6 +92,12 @@
               .start();
         }else {
           firebase.database().ref("/careGuru/" + this.uid + "/surveyData").set(that.surveyAnswerData);
+          firebase.database().ref("/careGuru/" + this.uid + "/surveyFinished").set(true)
+
+          //notify the parent about the survey completion
+          this.parent.surveyAlreadyDone = true;
+          this.parent.surveyData = that.surveyAnswerData;
+          this.parent.update();
           alert("Thank you for completing the questionnaire");
         }
       }

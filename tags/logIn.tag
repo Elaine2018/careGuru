@@ -69,15 +69,11 @@
               careGuruRef.child(user.uid).set(userInfo).catch(function (error) {
                 console.log(error.code + error.message)
               });
-            } else {
-               console.log('the user already exist');
             }
             that.parent.user = user;
             that.parent.update();
           }
         )
-
-
       }).catch(function (error) {
         // Handle Errors here.
         var errorCode = error.code;
@@ -86,8 +82,6 @@
         var email = error.email;
         // The firebase.auth.AuthCredential type that was used.
         var credential = error.credential;
-        // ...
-
         console.log(error.code + error.message + error.email)
       });
     }

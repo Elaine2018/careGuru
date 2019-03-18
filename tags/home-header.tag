@@ -4,7 +4,7 @@
     <div class="main-inner">
       <nav class="clearfix">
         <div class="logo">
-          <a href="#home"><img src="./img/LOGO.png" alt="logo"></a>
+          <a href="#home"><img src="/img/LOGO.png" alt="logo"></a>
         </div>
         <ul class="nav-right">
           <li>
