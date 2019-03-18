@@ -1,16 +1,16 @@
 
 <panel-sidebar>
-    <ul>
+    <ul class="t-center">
       <li><img src="./img/LOGO2.png" alt="logo"></li>
       <li class={activeSideBar: currentPage === 'home'}><a href="#{this.parent.parent.user.uid}/home" onclick={goback} data-message="panelhome"><i class="fa fa-home"></i></a></li>
       <li class={activeSideBar: currentPage === 'product'}><a href="#{this.parent.parent.user.uid}/product" onclick={goback} data-message="panelproduct"><i class="fa fa-tachometer"></i></a></li>
-      <li class={activeSideBar: currentPage === 'community'}><a href="#{this.parent.parent.user.uid}/contact" onclick={goback} data-message="panelcontact"><i class="fa fa-comment"></i></a></li>
+      <li class={activeSideBar: currentPage === 'contact'}><a href="#{this.parent.parent.user.uid}/contact" onclick={goback} data-message="panelcontact"><i class="fa fa-comment"></i></a></li>
       <li class={activeSideBar: currentPage === 'notification'}><i class="fa fa-bell"></i></li>
     </ul>
   <script>
     var that = this;
-    this.on('update', function() {
-      that.currentPage = that.parent.currentPage; //obtain the current page from parent tag to switch mode
+    this.on('update', ()=> {
+      this.currentPage = this.parent.currentPage; //obtain the current page from parent tag to switch mode
     })
 
     goback(e) {
@@ -19,16 +19,12 @@
         this.parent.tags.panelhome.homePage = false;
         this.parent.tags.panelhome.update();
       }else {
-        console.log('else: parent tag doesnt have ')
+        //console.log('else: parent tag doesnt have ')
       }
     }
   </script>
 
   <style>
-    ul {
-      text-align: center;
-    }
-
     ul > li {
       padding: 30px 5px;
       font-size: 1.2em;

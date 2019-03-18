@@ -158,6 +158,7 @@
     }
 
     .scene-wrap .status {
+      font-size: 1.2em;
       background: #fff;
       min-width: 200px;
       max-width: 30%;

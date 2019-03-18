@@ -7,11 +7,11 @@
           {user.displayName}
           <ul class="submenu">
             <li onclick={usercard}><i class="fa fa-user-circle"></i> Account</li>
-            <li><i class="fa fa-gear"></i>Lorem ipsum</li>
+            <li class="disabled" title="in dev"><i class="fa fa-gear"></i>Lorem ipsum</li>
             <li onclick={logOut}><i class="fa fa-sign-out"></i>sign out</li>
           </ul>
         </li>
-        <li><i class="fa fa-gear"></i></li>
+        <li class="disabled"><i class="fa fa-gear"></i></li>
         <li><i class="fa fa-search"></i></li>
       </ul>
     </nav>

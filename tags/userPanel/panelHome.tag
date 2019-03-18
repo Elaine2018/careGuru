@@ -3,10 +3,10 @@
   <div class="home-wrap" if={!homePage}>
     <!-- <h1>Hi this is home</h1> -->
     <section class="wrap tobeanimate">
-      <div class="home-option card-shape" each = {i in options} onclick={enter}>
+      <div class="home-option card-shape pointer" each = {i in options} onclick={enter} ref={i.title}>
         <img src={i.imgSrc} alt={i.title} >
         <h3>{i.title}</h3>
-        <p>{i.intro}</p>
+        <p class="t-justify">{i.intro}</p>
       </div>
     </section>
   </div>
@@ -40,12 +40,21 @@
 
     enter(e) {
       this.homePage = e.item.i.homePage;
+      window.location.href = window.location.href + '#' +  e.item.i.homePage
     }
 
     this.on('before-unmount', function() {
       // var wrap = document.querySelector('.tobeanimate');
       // // wrap.classList.remove('slideIn');
       // console.log(wrap);
+    })
+
+    this.on('mount', ()=> {
+      let path = window.location.hash.split('/');
+      let module = path[path.length - 1];
+      if(module !== 'home') {
+        window.location.href = window.location.href.replace(module, 'home')
+      }
     })
   </script>
 
@@ -57,9 +66,6 @@
     }
 
     p {
-      text-align: center;
-      padding: 20px 0;
-      font-size: 14px;
       font-weight: lighter;
     }
 

@@ -7,7 +7,6 @@
          <img src={i.scenarioImage || "./img/Scenario2.png"} alt="">
         </div>
     </div>
-
   </section>
 
   <!-- <button type="button" name="button" each = {i in scenarioData} onclick={selectScenario} if={!currentScenario} class="sceneSelect wrap-anime"> { i.scenarioName }</button> -->

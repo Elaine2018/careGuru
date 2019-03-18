@@ -1,13 +1,17 @@
 
 <info>
   <div class="panel-main-wrap info-wrap">
-    <!-- <p>Hi this is the info session</p> -->
-    <infoPiece each = {i in infoPieceData} data = {i} starred = {starredArticleId} onclick={openInfo}></infoPiece>
-    <infoOpen data = {openedCard || infoPieceData[0]} if={openedCard}></infoOpen>
+    <div class="t-right pr-2">
+      <a href="#{this.parent.parent.uid}/saved" class="view-saved t-underline">Vie your saved cards</a>
+    </div>
+    <div class='flex flex-wrap'>
+      <infoPiece class="info-piece" each = {i in infoPieceData} data = {i} starred = {starredArticleId} onclick={openInfo}></infoPiece>
+      <infoOpen data = {openedCard || infoPieceData[0]} if={openedCard}></infoOpen>
+    </div>
   </div>
   <script>
     this.userInfo = this.parent.userInfo;
-
+    console.log(this.parent.parent)
     var that = this;
     this.infoPieceData = [
       {
@@ -139,8 +143,16 @@
   </script>
 
   <style>
+    .view-saved {
+      font-size: 1.2em;
+      color: #f0a2ae;
+    }
+    .info-piece {
+      margin-right: 25px;
+    }
     .info-wrap {
       height: 550px;
+      padding: 3em 1em 3em 2em;
     }
   </style>
 </info>

@@ -67,10 +67,14 @@
     }
 
     .wrap .sidebar{
-      max-width: 60px;
+      max-width: 70px;
       background-color: #fff;
       position: relative;
       box-shadow: 3px 0 15px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .wrap .sidebar li {
+      font-size: 1.4em;
     }
 
     .wrap main {

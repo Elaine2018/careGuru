@@ -11,7 +11,7 @@
               </div>
             </div>
             <div class="main-bottom">
-              <p>{item.email}</p>
+              <a href={"mailto:" + item.email}><p>{item.email}</p></a>
             </div>
       </div>
     </div>
@@ -22,25 +22,25 @@
       name: "Yuntong Man",
       img: "../img/Yuntong.png",
       role: "Instructional Designer",
-      email: "Email: ymm2110@tc.columbia.edu",
+      email: "ymm2110@tc.columbia.edu",
     },
     {
       name: "Shuai Yuan",
       img: "../img/Shuai.jpeg",
       role: "Web Developer",
-      email: "Email: sy2729@tc.columbia.edu",
+      email: "sy2729@tc.columbia.edu",
     },
     {
       name: "Yigu Liang",
       img: "../img/Yigu.png",
       role: "Subject Matter Expert",
-      email: "Email: yl3605@tc.columbia.edu",
+      email: "yl3605@tc.columbia.edu",
     },
     {
       name: "Zhiping Zhang",
       img: "../img/Zhiping.png",
       role: "UX Designer",
-      email: "Email: zz2499@tc.columbia.edu",
+      email: "zz2499@tc.columbia.edu",
     }
   ]
 

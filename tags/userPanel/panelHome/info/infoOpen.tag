@@ -3,7 +3,7 @@
   <section class="infoOpen-wrap wrap-anime">
     <main class="card-body">
       <h3 class="title">{this.opts.data.title}</h3>
-      <p>{this.opts.data.content}</p>
+      <p class="t-justify">{this.opts.data.content}</p>
     </main>
     <footer class="card-footer">
       <div class={ "foot-left": true, starred: this.opts.data.starred } onclick={star} id = {this.opts.data.id}>
@@ -71,13 +71,13 @@
       width: 300px;
       max-height: 400px;
       background-color: #fff;
-      box-shadow: 2px 3px 9px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 1px 1px 13px 0px rgba(43,43,43,.3);
     }
 
     .infoOpen-wrap .card-body {
       overflow: auto;
       height: 88%;
-      padding: 15px;
+      padding: 20px 25px;
       box-sizing: border-box;
     }
     .infoOpen-wrap .card-body .title {

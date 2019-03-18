@@ -14,6 +14,7 @@
       padding: 30px;
       line-height: 2.3em;
       border-radius: 5px;
+      font-size: 1.2em;
     }
     .sceneBoard-wrap p {
       text-align: left;
